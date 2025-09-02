@@ -1,0 +1,15 @@
+AIM:to find the second Largest elemnt in the given array
+
+class Solution:
+    def getSecondLargest(self, arr):
+        n=len(arr)
+        larg=-1
+        seclarg=-1
+        for i in range(n):
+            if arr[i]>larg:
+                larg=arr[i]
+        for i in range(n):
+            if arr[i]>seclarg and arr[i]!=larg:
+                seclarg=arr[i]
+        return seclarg
+        return -1
